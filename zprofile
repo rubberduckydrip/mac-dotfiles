@@ -28,12 +28,12 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 # android emualtor
 export ANDROID_SDK_ROOT=/users/manwelbugeja/Library/Android/sdk
 ANDROID_PLATFORM_TOOLS=/users/$USER/library/android/sdk/platform-tools
-ANDROID_TOOLS=/users/$USER/library/android/sdk/tools
 ANDROID_BUILD_TOOLS=/users/manwel/library/android/sdk/build-tools/30.0.3
 ANDROID_NDK=/users/$USER/Library/Android/sdk/ndk/23.1.7779620
 ANDROID_CMDLINE_TOOLS=/Users/$USER/Library/Android/sdk/cmdline-tools/latest/bin
+ANDROID_EMULATOR=/users/$USER/Library/Android/sdk/emulator
 
-export PATH="$PATH:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS:$ANDROID_BUILD_TOOLS:$ANDROID_NDK:$ANDROID_CMDLINE_TOOLS"
+export PATH="$PATH:$ANDROID_PLATFORM_TOOLS:$ANDROID_EMULATOR:$ANDROID_BUILD_TOOLS:$ANDROID_NDK:$ANDROID_CMDLINE_TOOLS"
 
 export ANT_HOME=/usr/local/opt/ant
 export MAVEN_HOME=/usr/local/opt/maven
