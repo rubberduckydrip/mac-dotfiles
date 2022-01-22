@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# usage: plaso [binding directory] command
+# function plaso {
+#    file=$1;
+#    set -- "${@:2}";
+# 
+#    docker run -v $file/:/home/plaso log2timeline/plaso $@;
+# }
+
+
+#function plaso {
+#   docker run -v $PWD/:/home/plaso log2timeline/plaso $@;
+#}
+
+function genmd5 {
+  # if input is directory 
+  if [[ -d $1 ]]; then
+      tar -cf ${1}.tar $1
+      md5 ${1}.tar > ${1}.tar.md5
+
+  # if input is file
+  elif [[ -f $1 ]]; then
+      md5 ${1} > ${1}.md5
+
+  else
+      echo "$1 is not valid"
+      exit 1
+  fi
+}
+
+function checkmd5 {
+  FILE_MD5= md5 $1
+  ORIGINAL_MD5= cat ${1}.md5
+}

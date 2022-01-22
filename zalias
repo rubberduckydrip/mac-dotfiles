@@ -1,0 +1,15 @@
+#!/bin/sh
+
+alias ubuntu="prlctl start {426f6c9e-9ddc-4e2e-a2fc-ae07f9a09049}; ssh parallels@10.211.55.5"
+
+alias kali="prlctl start {acf1e89f-982f-44bf-aa1d-008d695e371a}; ssh manwel@10.211.55.4"
+
+alias vim="/Applications/MacVim.app/Contents/bin/vim"
+
+alias start_frida_server="adb root; adb shell /data/local/tmp/frida-server &; adb forward tcp:27043 tcp:27043; adb forward tcp:27042 tcp:27042"
+
+alias start_drozer="adb forward tcp:31415 tcp:31415; cd ~/Programs/drozer; pipenv run drozer console connect"
+
+# trash command flag to use finder
+#alias trash="trash -F"
+
