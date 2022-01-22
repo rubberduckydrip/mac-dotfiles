@@ -1,4 +1,4 @@
-ource ~/.zalias
+source ~/.zalias
 source ~/.zfunctions
 
 export lc_all=en_us.utf-8
