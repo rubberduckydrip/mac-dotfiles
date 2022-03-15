@@ -5,5 +5,5 @@ ln ./zprofile ~/.zprofile
 ln ./zalias ~/.zalias
 ln ./zfunctions ~/.zfunctions
 ln ./p10k.zsh ~/.p10k.zsh
-
+ln ./tmux.conf ~/.tmux.conf
 
