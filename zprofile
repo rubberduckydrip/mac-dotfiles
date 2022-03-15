@@ -17,7 +17,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 #export homebrew_cask_opts="--no-quarantine"
 
 # ovftool
-#export PATH="$PATH:/applications/vmware ovf tool"
+#export PATH="$PATH:/applications/vmware ovf tool":
 
 # matlab
 #export path="$path:/applications/matlab_r2020b.app/bin"
@@ -26,20 +26,20 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 #export path=$home/.npm-global/bin:$path
 
 # android emualtor
-export ANDROID_SDK_ROOT=/users/manwelbugeja/Library/Android/sdk
-ANDROID_PLATFORM_TOOLS=/users/$USER/library/android/sdk/platform-tools
-ANDROID_BUILD_TOOLS=/users/manwel/library/android/sdk/build-tools/30.0.3
-ANDROID_NDK=/users/$USER/Library/Android/sdk/ndk/23.1.7779620
-ANDROID_CMDLINE_TOOLS=/Users/$USER/Library/Android/sdk/cmdline-tools/latest/bin
-ANDROID_EMULATOR=/users/$USER/Library/Android/sdk/emulator
+export ANDROID_SDK_ROOT=/users/$USER/Library/Android/sdk
+#export ANDROID_HOME=/usr/local/share/android-commandlinetools
+export ANDROID_HOME=$ANDROID_SDK_ROOT
+ANDROID_PLATFORM_TOOLS=$ANDROID_HOME/platform-tools
+ANDROID_BUILD_TOOLS=$ANDROID_HOME/build-tools/28.0.2
+ANDROID_NDK=$ANDROID_HOME/ndk/23.1.7779620
+ANDROID_CMDLINE_TOOLS=$ANDROID_HOME/cmdline-tools/latest/bin
+ANDROID_EMULATOR=$ANDROID_HOME/emulator
 
 export PATH="$PATH:$ANDROID_PLATFORM_TOOLS:$ANDROID_EMULATOR:$ANDROID_BUILD_TOOLS:$ANDROID_NDK:$ANDROID_CMDLINE_TOOLS"
 
 export ANT_HOME=/usr/local/opt/ant
 export MAVEN_HOME=/usr/local/opt/maven
 export GRADLE_HOME=/usr/local/opt/gradle
-export ANDROID_HOME=/usr/local/opt/android-sdk
-export ANDROID_NDK_HOME=/usr/local/opt/android-ndk
 
 # java
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)

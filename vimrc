@@ -43,12 +43,13 @@ set clipboard=unnamed
 
 syntax on
 syntax enable
-set background=dark
 if $TERM == "xterm-256color"
   set t_Co=256
   set termguicolors
 endif
-colorscheme base16-brewer
+set background=dark
+colorscheme base16-ia-dark
+
 
 if has("gui_running")
   set background=dark
