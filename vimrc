@@ -20,6 +20,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'lervag/vimtex'
 Plugin 'rhysd/vim-grammarous'
 Plugin 'vim-scripts/indentpython.vim'
+Plugin 'zerowidth/vim-copy-as-rtf'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -47,13 +48,13 @@ if $TERM == "xterm-256color"
   set t_Co=256
   set termguicolors
 endif
-set background=light
+set background=dark
 
 
 if has("gui_running")
-  set background=light
+  set background=dark
   set lines=30 columns=90
-  set guifont=Monaco:h14
+  set guifont=Monaco:h1ng the plugin it's already loaded. You'll have
 endif
 
 set tabstop=2
@@ -61,7 +62,7 @@ set shiftwidth=2
 set autoindent
 set expandtab
 
-set wrap
+set nowrap
 set backspace=indent,eol,start
 
 set number

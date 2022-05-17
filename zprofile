@@ -4,17 +4,18 @@ source ~/.zfunctions
 export lc_all=en_us.utf-8
 export lang=en_us.utf-8
 
+export TERM=xterm-256color
+
 # metasploit
 export PATH=$PATH:/opt/metasploit-framework/bin
 
 # parallels
 export PATH="$PATH:/Applications/Parallels Desktop.app/Contents/MacOS"
 
-# homebrew
+## homebrew
 export PATH="/usr/local/sbin:$PATH"
-#export homebrew_no_auto_update=1
 export HOMEBREW_NO_AUTO_UPDATE=1
-#export homebrew_cask_opts="--no-quarantine"
+##export homebrew_cask_opts="--no-quarantine"
 
 # ovftool
 #export PATH="$PATH:/applications/vmware ovf tool":
@@ -27,10 +28,9 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 # android emualtor
 export ANDROID_SDK_ROOT=/users/$USER/Library/Android/sdk
-#export ANDROID_HOME=/usr/local/share/android-commandlinetools
 export ANDROID_HOME=$ANDROID_SDK_ROOT
 ANDROID_PLATFORM_TOOLS=$ANDROID_HOME/platform-tools
-ANDROID_BUILD_TOOLS=$ANDROID_HOME/build-tools/28.0.2
+ANDROID_BUILD_TOOLS=$ANDROID_HOME/build-tools/32.1.0-rc1
 ANDROID_NDK=$ANDROID_HOME/ndk/23.1.7779620
 ANDROID_CMDLINE_TOOLS=$ANDROID_HOME/cmdline-tools/latest/bin
 ANDROID_EMULATOR=$ANDROID_HOME/emulator
@@ -61,3 +61,9 @@ zstyle ':completion:*:default' list-colors "${(s.:.)_ls_colors}"
 # trash command flag to use finder
 #alias trash="trash -F"
 
+# macports
+#export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+#export MANPATH=/opt/local/share/man:$MANPATH
+
+# rbenv
+eval "$(rbenv init -)"
