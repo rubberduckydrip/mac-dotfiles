@@ -33,3 +33,7 @@ function checkmd5 {
   FILE_MD5= md5 $1
   ORIGINAL_MD5= cat ${1}.md5
 }
+
+function list_path {
+  sed 's/:/\n/g' <<< "$PATH"
+}

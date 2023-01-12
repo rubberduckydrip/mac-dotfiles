@@ -15,6 +15,7 @@ export PATH="$PATH:/Applications/Parallels Desktop.app/Contents/MacOS"
 ## homebrew
 export PATH="/usr/local/sbin:$PATH"
 export HOMEBREW_NO_AUTO_UPDATE=1
+#export PATH="$(brew --prefix bison)/bin:$PATH" # Not done by default :(
 ##export homebrew_cask_opts="--no-quarantine"
 
 # ovftool
@@ -27,12 +28,14 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 #export path=$home/.npm-global/bin:$path
 
 # android emualtor
-export ANDROID_SDK_ROOT=/users/$USER/Library/Android/sdk
+# export ANDROID_SDK_ROOT=/users/$USER/Library/Android/sdk
+export ANDROID_SDK_ROOT=/Volumes/USB-HDD/Data/Android/sdk
 export ANDROID_HOME=$ANDROID_SDK_ROOT
 ANDROID_PLATFORM_TOOLS=$ANDROID_HOME/platform-tools
-ANDROID_BUILD_TOOLS=$ANDROID_HOME/build-tools/32.1.0-rc1
+ANDROID_BUILD_TOOLS=$ANDROID_HOME/build-tools/28.0.2
 ANDROID_NDK=$ANDROID_HOME/ndk/23.1.7779620
 ANDROID_CMDLINE_TOOLS=$ANDROID_HOME/cmdline-tools/latest/bin
+ANDROID_TOOLS=$ANDROID_HOME/tools
 ANDROID_EMULATOR=$ANDROID_HOME/emulator
 
 export PATH="$PATH:$ANDROID_PLATFORM_TOOLS:$ANDROID_EMULATOR:$ANDROID_BUILD_TOOLS:$ANDROID_NDK:$ANDROID_CMDLINE_TOOLS"
@@ -42,7 +45,8 @@ export MAVEN_HOME=/usr/local/opt/maven
 export GRADLE_HOME=/usr/local/opt/gradle
 
 # java
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+#export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0_151 )
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 
 # GO
@@ -67,3 +71,24 @@ zstyle ':completion:*:default' list-colors "${(s.:.)_ls_colors}"
 
 # rbenv
 eval "$(rbenv init -)"
+
+# Setting PATH for Python 2.7
+# The original version is saved in .zprofile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH
+
+# Path for Nodejs 12
+export PATH="/usr/local/opt/node@12/bin:$PATH"
+
+# Path for Qt5
+export PATH="/usr/local/Cellar/qt@5/5.15.3/bin:$PATH"
+
+# School Ubuntu IP
+export LABPC="10.59.7.3"
+export AZUREIP="20.111.47.136"
+
+# For ssh 
+export DISPLAY=:0
+
+# For yara with androguard support
+#export PATH="/Users/manwelbugeja/Programs/yara-3.7.0:$PATH"

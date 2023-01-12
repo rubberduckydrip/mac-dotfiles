@@ -6,7 +6,7 @@ alias kali="prlctl start {acf1e89f-982f-44bf-aa1d-008d695e371a}; ssh manwel@10.2
 
 #alias vim="/Applications/MacVim.app/Contents/bin/vim"
 
-alias start_frida_server="adb root; adb shell /data/local/tmp/frida-server &; adb forward tcp:27043 tcp:27043; adb forward tcp:27042 tcp:27042"
+alias start_frida_server="adb root; adb shell chmod 755 /data/local/tmp/frida-server; adb shell /data/local/tmp/frida-server &; adb forward tcp:27043 tcp:27043; adb forward tcp:27042 tcp:27042"
 
 alias start_drozer="adb forward tcp:31415 tcp:31415; cd ~/Programs/drozer; pipenv run drozer console connect"
 
@@ -14,3 +14,15 @@ alias start_drozer="adb forward tcp:31415 tcp:31415; cd ~/Programs/drozer; pipen
 #alias trash="trash -F"
 
 alias restart_shell="exec $SHELL -l"
+
+alias disable_dock="defaults write com.apple.dock autohide-delay -float 1000; killall Dock"
+
+alias restore_dock="defaults delete com.apple.dock autohide-delay; killall Dock"
+
+alias start_vnc="ssh -L 3398:127.0.0.1:3398 -N -f -l user 10.59.7.3"
+
+alias obfuscapk="docker run --rm -it -u $(id -u):$(id -g) -v "${PWD}":"/workdir" obfuscapk"
+
+alias school_ssh="ssh user@10.59.7.3"
+
+alias school_vnc="ssh -L 59000:localhost:5901 -C -N -l user 10.59.7.3"

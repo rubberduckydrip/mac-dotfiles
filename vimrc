@@ -7,7 +7,7 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
+" let Vundle manage Vundle, required Plugin 'VundleVim/Vundle.vim'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -21,6 +21,9 @@ Plugin 'lervag/vimtex'
 Plugin 'rhysd/vim-grammarous'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'zerowidth/vim-copy-as-rtf'
+Plugin 'darfink/vim-plist'
+Plugin 'kelwin/vim-smali'
+Plugin 'yaunj/vim-yara'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,13 +51,11 @@ if $TERM == "xterm-256color"
   set t_Co=256
   set termguicolors
 endif
-set background=dark
-
+source ~/.vim_theme.vim 
 
 if has("gui_running")
-  set background=dark
   set lines=30 columns=90
-  set guifont=Monaco:h1ng the plugin it's already loaded. You'll have
+  set guifont=Monaco:h14
 endif
 
 set tabstop=2
@@ -62,12 +63,12 @@ set shiftwidth=2
 set autoindent
 set expandtab
 
-set nowrap
+set wrap
 set backspace=indent,eol,start
 
 set number
 
-:set mouse=a
+set mouse=a
 
 set scrolloff=4 " Keep 4 lines below and above the cursor
 
@@ -89,8 +90,12 @@ noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
-" set cursorline
-hi CursorLine term=bold cterm=bold guibg=Grey40
+set cursorline
+"hi CursorLine term=bold cterm=bold guibg=Grey40
+
+" set F4 to copy file path to clipboard
+noremap <silent> <F4> :let @+=expand("%:p")<CR>
+
 
 map <C-b> :!latexmk <enter>
 
