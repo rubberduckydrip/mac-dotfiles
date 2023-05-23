@@ -16,7 +16,6 @@ Plugin 'tomlion/vim-solidity'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'udalov/kotlin-vim'
 Plugin 'pangloss/vim-javascript'
-Plugin 'chriskempson/base16-vim'
 Plugin 'lervag/vimtex'
 Plugin 'rhysd/vim-grammarous'
 Plugin 'vim-scripts/indentpython.vim'
@@ -24,6 +23,7 @@ Plugin 'zerowidth/vim-copy-as-rtf'
 Plugin 'darfink/vim-plist'
 Plugin 'kelwin/vim-smali'
 Plugin 'yaunj/vim-yara'
+Plugin 'wojciechkepka/vim-github-dark'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -45,13 +45,15 @@ filetype plugin indent on    " required
 set encoding=utf-8
 set clipboard=unnamed
 
+colorscheme ghdark
+
 syntax on
 syntax enable
 if $TERM == "xterm-256color"
   set t_Co=256
   set termguicolors
 endif
-source ~/.vim_theme.vim 
+
 
 if has("gui_running")
   set lines=30 columns=90
@@ -97,7 +99,8 @@ set cursorline
 noremap <silent> <F4> :let @+=expand("%:p")<CR>
 
 
-map <C-b> :!latexmk <enter>
+"map <C-b> :!latexmk <enter>
+nnoremap <C-m> :w<CR>:!make<CR>
 
 set hidden
 
